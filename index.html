@@ -1,0 +1,107 @@
+<!doctype html>
+<html lan="en">
+	
+	<head>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> 
+		<title>Shared Death</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+		<meta name="viewport" content="target-densitydpi=device-dpi">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Open+Sans:300,700&subset=latin-ext' rel='stylesheet' type='text/css'>
+		<link href='/css/fontello.css' rel='stylesheet' type='text/css'>
+		<link href='/main.css' rel='stylesheet' type='text/css'>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		  ga('create', 'UA-37257657-4', 'kulu.be');
+		  ga('send', 'pageview');
+		</script>
+	</head>
+
+	<body>
+		<!-- Background -->
+		<div id="container" class="background">
+			<div id="output"></div>
+			<div id="vignette" class="full-screen vignette"></div>
+			<div class="full-screen noise"></div>
+		</div>
+
+		<!-- Content -->
+		<div class="full-screen">
+
+			<!-- Icons -->
+			<div class="icons">
+				<div class="left-icons">
+					<span id="backIcon"><i class="icon icon-level-up"></i></span>
+					<span id="refreshIcon"><i class="icon icon-cw-1"></i></span>
+				</div>
+				<div class="right-icons" id="rightIcons">
+					<span><i class="icon icon-language"></i></span>
+					<span class="language-selection">
+						<span class="language active" id="langEN">English</span>
+						<span style="margin: 0 4px;">|</span>
+						<span class="language" id="langTR">Türkçe</span>
+					</span>
+				</div>
+			</div>
+
+			<!-- Home -->
+			<div id="home" class="home">
+				<!-- Links -->
+				<div class="links">
+					<div class="row" id="mezarTasi">
+						<span class="title" id="app1Title">GRAVESTONE</span>
+					</div>
+					<hr/>
+					<div class="row" id="ikiKapiliHan">
+						<span class="title" id="app2Title">TWO-DOOR INN</span>
+					</div>
+					<hr/>
+					<div class="row" id="makber">
+						<span class="title" id="app3Title">TOMB</span>
+					</div>
+				</div>
+				<!-- About -->
+				<div class="about">
+					<span id="aboutTitle">ABOUT</span>
+					<br />
+					<p id="aboutBody">Shared Death is a web-based artwork which filters shared thoughts containing keywords like "death", "dying" from the Twitter in real time. Its purpose is to help people better understand how other people thinks and feels about the shared destiny of all living things in the planet. You can participate in this experiment by sending tweet with #death keyword.
+					<a target="_blank" href="http://goo.gl/sBvUa">Read More</a>
+					<br />
+					Mustafa İlhan - <a target="_blank" href="https://twitter.com/mustilica">@mustilica</a></p>
+				</div>
+			</div>
+
+			<!-- App1 -->
+			<div id="app1" class="app1 full-screen">
+				<ul>
+					<li id="current" class="active" style="display: block">&nbsp;</li>
+				</ul>
+			</div>
+
+			<!-- App2 -->
+			<div id="app2" class="app2 full-screen">
+				<div id="tweets-app2" class="full-screen"></div>
+			</div>
+
+			<!-- App3 -->
+			<div id="app3" class="app3 full-screen">
+				<div id="tweets-app3" class="full-screen"></div>
+			</div>
+
+		</div>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<script src="/fss.min.js"></script> 
+		<script src="/bg.js"></script> 
+		<script src="/client.js"></script> 
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/textualizer.min.js"></script>  
+	</body>
+
+</html>
