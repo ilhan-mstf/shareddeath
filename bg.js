@@ -1,3 +1,8 @@
+/*! 
+ * Copyright (c) 2013 Mustafa İlhan released under the MIT license
+ * based on https://github.com/wagerfield/flat-surface-shader
+ */
+
 (function(){
 
   //------------------------------
